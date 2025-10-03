@@ -1346,6 +1346,95 @@ input, select, textarea {
 					-ms-transition-delay: 0.5s;
 					transition-delay: 0.5s;
 					opacity: 1;
+/* SOLUCIÓN ESPECÍFICA PARA americapvc.com - PLANTILLA LENS */
+@media screen and (max-width: 736px) {
+    
+    /* RESET COMPLETO DEL LAYOUT EN MÓVILES */
+    #thumbnails {
+        display: block !important;
+        width: 100% !important;
+        margin: 0 auto !important;
+        padding: 0 10px !important;
+        text-align: center !important;
+    }
+    
+    /* CADA ARTÍCULO OCUPA UNA LÍNEA COMPLETA */
+    #thumbnails article {
+        width: 100% !important;
+        max-width: 400px !important;
+        margin: 0 auto 30px auto !important;
+        float: none !important;
+        display: block !important;
+        position: relative !important;
+        left: auto !important;
+        top: auto !important;
+        transform: none !important;
+        clear: both !important;
+    }
+    
+    /* CONTENEDOR DE IMAGEN */
+    #thumbnails .thumbnail {
+        width: 100% !important;
+        height: auto !important;
+        margin: 0 auto !important;
+        display: block !important;
+        position: relative !important;
+    }
+    
+    /* IMAGEN EN SÍ - TAMAÑO CONSISTENTE */
+    #thumbnails .thumbnail img {
+        width: 100% !important;
+        max-width: 400px !important;
+        height: 280px !important;
+        object-fit: cover !important;
+        object-position: center !important;
+        display: block !important;
+        margin: 0 auto !important;
+        border-radius: 8px !important;
+        box-shadow: 0 4px 15px rgba(0,0,0,0.1) !important;
+    }
+    
+    /* TEXTO DEBAJO DE LAS IMÁGENES */
+    #thumbnails article h2 {
+        font-size: 1.2em !important;
+        margin: 15px 0 5px 0 !important;
+        text-align: center !important;
+    }
+    
+    #thumbnails article p {
+        font-size: 0.9em !important;
+        text-align: center !important;
+        margin: 0 0 20px 0 !important;
+        line-height: 1.4 !important;
+    }
+}
+
+/* PARA MÓVILES MÁS PEQUEÑOS */
+@media screen and (max-width: 480px) {
+    #thumbnails article {
+        max-width: 100% !important;
+        margin: 0 auto 25px auto !important;
+    }
+    
+    #thumbnails .thumbnail img {
+        height: 250px !important;
+        max-width: 100% !important;
+    }
+    
+    #thumbnails {
+        padding: 0 15px !important;
+    }
+}
+
+/* ELIMINAR CUALQUIER DESBORDAMIENTO */
+body {
+    overflow-x: hidden !important;
+    max-width: 100% !important;
+}
+
+#main {
+    overflow-x: hidden !important;
+}
 				}
 
 		}
